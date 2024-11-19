@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7765940058239053740}
   - component: {fileID: 3629796274065301042}
   - component: {fileID: -5070418978794084305}
+  - component: {fileID: 6476250686031825113}
   m_Layer: 0
   m_Name: Croissant
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7016249740846602164}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.3, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
@@ -34,7 +36,6 @@ Transform:
   m_Children:
   - {fileID: 848689466016012865}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8436861223334601304
 MeshFilter:
@@ -135,6 +136,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &6476250686031825113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016249740846602164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c0bcd831b3a10438a679953f546c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 609299208961236454, guid: a1b9a100a787c4e19b7dae548155e587, type: 3}
 --- !u!1001 &7201396357205496603
 PrefabInstance:
   m_ObjectHideFlags: 0
