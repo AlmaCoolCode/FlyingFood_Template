@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6091735948893877931}
   - component: {fileID: -4490096773773665847}
   - component: {fileID: 1950853584441865000}
+  - component: {fileID: 8935615958753550496}
   m_Layer: 0
   m_Name: IceCream
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621572241504145850}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
@@ -34,7 +36,6 @@ Transform:
   m_Children:
   - {fileID: 8689090354899037778}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &230667002671731661
 MeshFilter:
@@ -135,6 +136,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6da9d5cde97ad394e97f1227e5fbf342, type: 3}
+--- !u!114 &8935615958753550496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621572241504145850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c0bcd831b3a10438a679953f546c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 609299208961236454, guid: a1b9a100a787c4e19b7dae548155e587, type: 3}
 --- !u!1001 &1198662166325045000
 PrefabInstance:
   m_ObjectHideFlags: 0

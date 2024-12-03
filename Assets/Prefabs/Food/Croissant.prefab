@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7765940058239053740}
   - component: {fileID: 3629796274065301042}
   - component: {fileID: -5070418978794084305}
-  - component: {fileID: 6476250686031825113}
+  - component: {fileID: 2507285633444891718}
   m_Layer: 0
   m_Name: Croissant
   m_TagString: Untagged
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &6476250686031825113
+--- !u!114 &2507285633444891718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

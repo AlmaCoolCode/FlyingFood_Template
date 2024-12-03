@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2259677458657494475}
   - component: {fileID: 2192086356162498532}
   - component: {fileID: 3495842230781538220}
+  - component: {fileID: -3154813300544657764}
   m_Layer: 0
   m_Name: BurgerLarge
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413109509644517594}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
@@ -34,7 +36,6 @@ Transform:
   m_Children:
   - {fileID: 8580837662484790126}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6135071674781678096
 MeshFilter:
@@ -135,6 +136,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: f9e7ed08898d80148b9f645cd07c8b8e, type: 3}
+--- !u!114 &-3154813300544657764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413109509644517594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c0bcd831b3a10438a679953f546c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 609299208961236454, guid: a1b9a100a787c4e19b7dae548155e587, type: 3}
 --- !u!1001 &2243385404326965812
 PrefabInstance:
   m_ObjectHideFlags: 0
