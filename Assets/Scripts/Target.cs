@@ -10,7 +10,8 @@ public class Target : MonoBehaviour
     [SerializeField] private GameObject hitEffect;
     [SerializeField] private GameObject appearEffect;
     private int score;
-    [SerializeField] private TMP_Text scoreText;    
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text highscoreText;
 
     private void Awake() 
     {
@@ -19,6 +20,10 @@ public class Target : MonoBehaviour
             allSpawns.Add(spawnPoint);
         }
         score = 0;
+    }
+    private void Start()
+    {
+        highscoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
     }
 
     private void OnCollisionEnter(Collision other) 
@@ -30,7 +35,12 @@ public class Target : MonoBehaviour
     private void Respawn()
     {
         score++;
+        if (PlayerPrefs.GetInt("Highscore") < score)
+        {
+            PlayerPrefs.SetInt("Highscore", score);
+        }
         scoreText.text = "Score: " + score.ToString();
+        highscoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
         Instantiate(hitEffect, transform.position, transform.rotation);
         Transform randomSpawn = allSpawns[Random.Range(0, allSpawns.Count)];
         transform.SetPositionAndRotation(randomSpawn.position, randomSpawn.rotation);
