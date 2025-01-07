@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int timerInsgesamt = 90;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject RestartPanel;
+    [SerializeField] private AudioSource StartSong;
+    [SerializeField] private AudioSource EndSong;
 
     private void Start()
     {
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             RestartPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            StartSong.Stop();
+            EndSong.Play();
         }
         
     }

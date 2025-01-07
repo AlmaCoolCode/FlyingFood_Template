@@ -7,6 +7,7 @@ public class FoodCannon : MonoBehaviour
     [SerializeField] private Transform shootPoint;
     [SerializeField] private List<GameObject> foodList;
     [SerializeField] private float shootSpeed = 30;
+    [SerializeField] private AudioSource shootSound;
 
     private void Update() 
     {
@@ -21,5 +22,6 @@ public class FoodCannon : MonoBehaviour
         GameObject food = foodList[Random.Range(0, foodList.Count)];
         GameObject newFood = Instantiate(food, shootPoint.position, Random.rotation);
         newFood.GetComponent<Rigidbody>().velocity = shootPoint.forward * shootSpeed;
+        shootSound.Play();
     }
 }
