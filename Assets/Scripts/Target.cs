@@ -12,6 +12,7 @@ public class Target : MonoBehaviour
     private int score;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text highscoreText;
+    private Transform lastSpawn;
 
     private void Awake() 
     {
@@ -42,7 +43,16 @@ public class Target : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
         highscoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
         Instantiate(hitEffect, transform.position, transform.rotation);
+        if (lastSpawn != null) 
+        {
+            allSpawns.Remove(lastSpawn);
+        }
         Transform randomSpawn = allSpawns[Random.Range(0, allSpawns.Count)];
+        if (lastSpawn != null)
+        {
+           allSpawns.Add(lastSpawn);
+        }
+        lastSpawn = randomSpawn;
         transform.SetPositionAndRotation(randomSpawn.position, randomSpawn.rotation);
         Instantiate(appearEffect, transform.position, transform.rotation);
     }
